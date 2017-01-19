@@ -1,0 +1,29 @@
+<div class="details">
+  <div class="mdl-list__item-primary-content mdl-grid">
+  	<div class="mdl-cell--1-offset-desktop mdl-cell--1-col mdl-cell--4-col-phone price">
+  		<span>{{currentItem.price}}</span>
+  	</div>
+  </div>
+  <div class="mdl-list__item-primary-content mdl-grid">
+    <div class="thumbnail mdl-cell mdl-cell--1-offset-desktop mdl-cell--4-col mdl-cell--4-col-phone">
+      <img [src]="currentImg"  alt="an image" class="mdl-shadow--2dp"/>
+    </div>
+    <div class="mdl-cell--1-col mdl-cell--12-col-phone thumbnail-list">
+  	    
+  	    <div *ngFor="let thumbnail of currentItem.thumbnail; let i = index"  class="thumbnail-container">
+           <img [src]="thumbnail" alt="an image" (click)="changePicture(i)">
+  	    </div>
+    </div>
+     
+     <div class="mdl-cell--5-col mdl-cell--1-offset-desktop product-desc ">
+         <h4>{{currentItem.name}}</h4>
+         <span>{{currentItem.description}}</span>
+         <div class="rating">
+             <h5>Customer Rating</h5>
+         	 <span>4,5/5</span>
+         </div>
+         <hr>
+         <div  class="mdl-cell mdl-cell--5-col actions" app-item-action></div>
+     </div>
+  </div>
+</div>

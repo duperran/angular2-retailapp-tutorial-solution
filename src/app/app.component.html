@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<div class="android-header mdl-layout__header mdl-layout__header--waterfall" menu>
+	
+</div>
+<div class="android-drawer mdl-layout__drawer">
+  <nav class="mdl-navigation">
+    <a *ngFor="let item of menu" class="mdl-navigation__link" [routerLink]="item.ref">{{item.name}}</a>
+  </nav>
+</div>
+
+
+<div class="android-content mdl-layout__content">
+<router-outlet></router-outlet>
+</div>
+
+
