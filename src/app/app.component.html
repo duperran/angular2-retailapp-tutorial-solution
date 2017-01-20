@@ -1,7 +1,7 @@
 <div class="android-header mdl-layout__header mdl-layout__header--waterfall" menu>
 	
 </div>
-<div class="android-drawer mdl-layout__drawer">
+<div class="android-drawer mdl-layout__drawer" id="side-menu">
   <nav class="mdl-navigation">
     <a *ngFor="let item of menu" class="mdl-navigation__link" [routerLink]="item.ref">{{item.name}}</a>
   </nav>

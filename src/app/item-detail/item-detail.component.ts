@@ -25,7 +25,9 @@ export class ItemDetailComponent implements OnInit {
   ngOnInit() {
    this.currentRoute.params.subscribe(params => {
      let id = +params['id']; // (+) converts string 'id' to a number
+     console.log(id)
      this.currentItem =  this.itemSrv.getItem(id);
+     console.log(this.currentItem);
      this.currentImg = this.currentItem.images[0];
    });
   }

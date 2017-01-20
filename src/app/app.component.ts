@@ -7,7 +7,7 @@ import { ItemService } from './service/item.service';
 import {MenuItem} from './models/menuitem';
 
 @Component({
-  selector: '#dynamic-app',
+  selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   providers: [ItemService]

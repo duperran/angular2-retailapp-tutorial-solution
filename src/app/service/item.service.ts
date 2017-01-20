@@ -86,7 +86,7 @@ export class ItemService {
 
   getItem(id): Item {
   	return this.items.filter(function(item){
-        return item.id === id;
+        return item.id == id;
   	})[0];
   }
 }
