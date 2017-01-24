@@ -1,0 +1,21 @@
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  min-height: 150px;
+}
+
+.description {
+	color: grey;
+	font-size: 11px;
+}
+
+@media(min-width: 900px) {
+
+.thumbnail {
+	background-color: #ccc;
+	min-width: 50px;
+	min-height: 50px;
+ }
+}
