@@ -1,0 +1,30 @@
+<div class="details">
+  <div class="mdl-list__item-primary-content mdl-grid">
+    <div class="mdl-cell--1-offset-desktop mdl-cell--1-col mdl-cell--4-col-phone price">
+         <!-- Current Item Price -->
+    </div>
+  </div>
+  <div class="mdl-list__item-primary-content mdl-grid">
+    <div class="thumbnail mdl-cell mdl-cell--1-offset-desktop mdl-cell--4-col mdl-cell--4-col-phone">
+              <!-- SOMETHING HERE TO DISPLAY ITEM IMAGE-->
+      <img [src]="currentImg"  alt="an image" class="mdl-shadow--2dp"/>
+    </div>
+    <div class="mdl-cell--1-col mdl-cell--12-col-phone thumbnail-list">
+        <!-- SOMETHING HERE TO INCLUDE THUMBNAILS-->
+        <div *ngFor="let thumbnail of currentItem.thumbnail; let i = index" class="thumbnail-container">
+           <img [src]="thumbnail" alt="an image" (click)=changePicture(i)>
+        </div>
+    </div>
+     <div class="mdl-cell--5-col mdl-cell--1-offset-desktop product-desc ">
+         <h4>{{currentItem.name}}</h4>
+         <span>{{currentItem.description}}</span>
+         <div class="rating">
+             <h5>Customer Rating</h5>
+           <span>4/5</span>
+         </div>
+         <hr>
+          <!-- Some actions must be available here like favorite -->
+         <div class="mdl-cell mdl-cell--5-col actions" app-item-action [itemId]="currentItem.id"></div>
+     </div>
+  </div>
+</div>
