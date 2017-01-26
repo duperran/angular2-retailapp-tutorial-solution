@@ -3,11 +3,8 @@
      <li *ngFor="let item of items; let i=index" class="mdl-cell mdl-cell--4-col mdl-list__item c-item mdl-shadow--2dp">
        <div class="mdl-list__item-primary-content mdl-grid">
          <img src="{{item.images[0]}}" alt="an image" class="thumbnail mdl-cell mdl-cell--10-col mdl-cell--2-col-phone"/> 
-         <div  class="mdl-cell mdl-cell--2-col"> 
-         	<button (click)='setAsFavorite(i)' class="mdl-button mdl-js-button mdl-button--icon" [style.color] = "isFavorite[i] ? 'red':''">
-         	<i class="material-icons">favorite</i></button>
-            <button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">pageview</i></button>
-             <button class="mdl-button mdl-js-button mdl-button--icon"><i class="material-icons">add_shopping_cart</i></button>
+         <div  class="mdl-cell mdl-cell--2-col" app-item-action [itemId]="item.id"> 
+         	
          </div>
          <span  class="mdl-cell mdl-cell--10-col description">
             {{item.description}}

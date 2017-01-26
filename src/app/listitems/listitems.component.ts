@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../models/item';
-import { ItemService} from '../service/item.service'; 
+import { ItemService } from '../service/item.service'; 
+
 @Component({
   selector: 'app-listitems',
   templateUrl: './listitems.component.html',

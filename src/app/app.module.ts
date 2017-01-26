@@ -9,6 +9,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ListitemsComponent } from './listitems/listitems.component';
 import { ItemService } from './service/item.service';
+import { ItemDetailComponent } from './item-detail/item-detail.component';
+import { ItemActionComponent } from './item-action/item-action.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { ItemService } from './service/item.service';
     MenuComponent,
     HomeComponent,
     ListitemsComponent,
+    ItemDetailComponent,
+    ItemActionComponent,
   ],
   imports: [
     BrowserModule,
@@ -23,8 +27,8 @@ import { ItemService } from './service/item.service';
     HttpModule,
     RouterModule.forRoot([
       {path:'', component: HomeComponent},
-      {path:'items', component: ListitemsComponent}
-
+      {path:'items', component: ListitemsComponent},
+      {path:'items/:id', component: ItemDetailComponent}
       ])
   ],
   providers: [ItemService],

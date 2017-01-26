@@ -40,4 +40,11 @@ export class ItemService {
   	 return this.items;
   }
 
+  getItem(id): Item {
+
+    return this.items.filter(function(item){
+        return item.id == id
+    })[0]
+  }
+
 }
