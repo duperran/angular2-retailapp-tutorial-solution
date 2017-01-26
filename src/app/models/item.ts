@@ -4,5 +4,6 @@ export class Item {
 	price: String,
 	description: String,
 	thumbnail: String[],
-    images: String[]
+  images: String[],
+  rating: String  
 }
